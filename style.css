@@ -1,0 +1,452 @@
+header
+{
+    background-image: url("background.png");
+    height: fit-content;
+    
+    /*header text placement*/
+    display: flex;
+    place-items: center;
+    justify-content: center;
+  
+    /*text specific */
+    text-align: center;
+    font-size:10px;
+
+}
+
+footer
+{
+    background-color:#5E5E5E;
+    height: 50px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    gap:5%; /*Space between links, horizontal*/
+
+}
+
+/*Links*/
+footer a 
+{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover
+{
+    color: black;
+}
+
+/*Main---------------------------------------------------------------------------------*/
+
+/*general page layout*/
+.container
+{
+    display: grid;
+    grid-template-rows: 70px 400px 200px 420px 200px;
+    grid-template-columns: 100%;
+    gap:10px; /*space between boxes*/
+    background-image: url("background.png"); /*background image defaults to repeat*/
+    
+    grid-template-areas: 
+    "nav"
+    "about"
+    "bibliography"
+    "image_library"
+    "blog"
+}
+
+/*Sections in Main---------------------------------------------------------------------*/ 
+
+/*Navigation---------------------------------------------------------------------*/ 
+
+nav
+{
+    display: flex;
+    justify-content:center;
+    place-items: center;
+    height: 10vh;
+    gap:5%; /*space between boxes*/
+    background-image: url("nav.png");
+}
+
+/*Links*/
+nav a
+{
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover
+{
+    color:black;
+}
+
+/*About----------------------------------------------------------------------------------*/
+
+#about
+{
+    display:flex;
+    place-items: center;
+    gap: 10%;
+    border-style: solid;
+    border: radius 2px;
+    border-color:#A2200E;
+}
+
+/*Text*/
+#alltext
+{
+    display:flex;
+    flex-direction: column; 
+    place-items: inherit;
+    max-height: 350px;
+    gap: 15px;
+    text-align: center;
+}
+
+#atitle
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#atext
+{
+    overflow-y: hidden;
+    font-size: 15px;
+}
+
+#atext p
+{
+    margin-top: 0;    /*removes blank space at top of essay
+    not sure why I specifically had to do this to the parabgraph
+    removing padding from text didn't work*/
+}
+
+/*Images*/
+#tongue
+{
+    height: 300px;
+    padding-left: 10%;
+}
+
+.arrowsA
+{ /*Arrow Placement*/
+    display:flex;
+    flex-direction:column;
+    place-content: space-between;
+    margin-left: auto; /*Shoves all the way to the right*/
+    height: 390px; /*Height didn't want to auto*/
+}
+
+.arrowsA img
+{/*Size of Arrows*/
+    width: 25px;
+    height:auto;
+}
+
+/*Bibliography-------------------------------------------------------------------------*/
+
+#bibliography
+{
+    display: flex;
+    border-style: solid;
+    border: radius 2px;
+    border-color:#A2200E;
+}
+
+/*Text*/
+#completetext
+{
+    margin-top: 5px;
+    margin-left: 5px;   
+}
+
+#btitle
+{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px; /*acts like gap*/
+}
+
+#btext
+{
+    height: 140px;
+    width: fit-content;
+    overflow-y: hidden; /*Scroll*/
+}
+
+/*Lists*/
+#btext ul
+{
+    margin-top: 0; /*removes space at top of list*/
+    list-style: none; /*removes bullets*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /*space between items*/
+}
+
+/*Links*/
+#btext a
+{
+    text-decoration: none;
+    color: #D10000;
+}
+
+#btext a:hover
+{
+    color:black;
+}
+
+#btext a:visited
+{
+    color:#D10000;
+}
+
+/*Images*/
+.arrows
+{/*Arrow Placement, also applies in blog*/
+    display:flex;
+    flex-direction:column;
+    place-content: space-between;
+    margin-left: auto;
+}
+
+.arrows img
+{/*Size of Arrows*/
+    width: 25px;
+    height:auto;
+}
+
+.minarrows
+{/*Minimize arrows not there by default*/
+    display: none;
+}
+
+/*Images--------------------------------------------------------------------------------*/
+
+#image_library
+{
+    display:flex;
+    flex-direction: column;
+    border-style: solid;
+    border: radius 2px;
+    border-color:#A2200E;
+}
+
+/*Text*/
+#iltitle
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/*Images*/
+.photos 
+{   /*controls photo lineup*/
+    display:flex;
+    gap: 50px; /*gap between photos*/
+    overflow:hidden; /*scrollbar*, not overflow-x because then overflow-y scrollbar appears*/
+    padding-top: 15px; /*gap between title and library*/
+}
+
+.photos img 
+{/*controls photo size*/
+    max-height:300px; /*adjusts photos that are taller than wider*/
+    object-fit:scale-down;/*shrinks photos to fit*/
+}
+
+.arrowslr 
+{/*controls arrow placement*/
+    margin-top: auto;/*shoves arrows to bottom of box*/
+    display:flex;
+    place-content: space-between;/*shoves arrows as far apart from each other as possible*/
+}
+
+.arrowslr img 
+{/*controls arrow images, shrinks them */
+ /*made them bigger than up and down arrows*/
+    width: 50px;
+    height:auto;
+}
+
+/*Blog---------------------------------------------------------------------------------*/
+
+#blog
+{
+    display: flex;
+    border-style: solid;
+    border: radius 2px;
+    border-color:#A2200E;
+}
+
+/*Text*/
+#blogtext
+{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 100%;/*doesn't take up full space if i do fit content*/
+}
+
+#bltitle
+{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+#checkoutmyblog
+{
+    height: 130px;
+    overflow-y: hidden;
+}
+
+/*Lists*/
+#checkoutmyblog ul
+{
+    margin-top: 0; /*once again removes blank space at top of list*/
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*Links*/
+#checkoutmyblog a
+{
+    font-size: 20px;
+    text-decoration: none;
+    color: #D10000;
+}
+
+#checkoutmyblog a:hover
+{
+    color: black;
+}
+
+#checkoutmyblog a:visited
+{
+    color: #D10000;
+}
+
+ /*Small Screen Stuff---------------------------------------------------------------------------------*/   
+
+@media (max-width: 500px) 
+{
+    .container
+    {
+        grid-template-rows: auto;
+    }
+
+    /*directional arrows disappear*/
+    .arrows
+    {
+        display: none;
+    }
+
+    .arrowsA
+    {
+        display:none;
+    }
+
+    .arrowslr img 
+    {
+        padding-inline: 2%;
+    }
+
+    /*minimize arrows appear*/
+    .minarrows
+    {
+        display: grid;
+        /*stacks images on top of each other by making it a 1 by 1 box*/
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin-left: auto; /*shoves them all the way to the right*/
+    }
+    
+    .minarrows img
+    {
+        width: 30px;
+        height:auto;
+        grid-area: 1/1/2/2;
+        /*grid-area: row-start / column-start / row-end / column-end
+        creates single unit box with items stacked on top*/
+    }
+
+    /*maximize arrows hidden by default*/
+     #uparrowAMin
+    {
+        display: none;
+    }
+
+    #uparrowBMin
+    {
+        display: none;
+    }
+
+     #uparrowBLMin
+    {
+        display: none;
+    }
+
+    /*other section formatting*/
+    #about img
+    {
+        padding-left: 5%;
+        padding-top: 10%;
+    }
+
+    /*about image moves to be stacked on top of text*/
+    #about
+    {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 5%;
+        height: fit-content;
+    }
+
+    #alltext
+    {
+        max-height: none;
+        padding: 5%;
+    }
+
+    #bibliography 
+    {
+        height: 30px; /*height while minimized*/
+    }
+
+    /*text hidden to start*/
+    #btext
+    {
+        display:none;
+        height: fit-content;
+    }
+
+    #iltitle
+    {
+        margin-left: -4%;
+    }
+
+    #photos_title
+    {
+        padding-inline:5%;
+    }
+
+    #blog
+    {
+        height: 30px; /*height while minimized*/
+    }
+
+    /*text hidden to start*/
+    #checkoutmyblog
+    {
+        height: auto;
+        display: none;
+    }
+
+}   
